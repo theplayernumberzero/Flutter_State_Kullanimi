@@ -1,3 +1,4 @@
+import 'package:calisma_yapisi/oyun_ekrani.dart';
 import 'package:flutter/material.dart';
 
 class Anasayfa extends StatefulWidget {
@@ -28,6 +29,9 @@ class _AnasayfaState extends State<Anasayfa> {
                 sayac++;
               });
             }, child: const Text("Tıkla")),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const OyunEkrani()));
+            }, child: const Text("Basla")),
           ],
         ),
       ),
