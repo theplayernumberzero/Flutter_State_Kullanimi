@@ -12,6 +12,11 @@ class Anasayfa extends StatefulWidget {
 class _AnasayfaState extends State<Anasayfa> {
   int sayac = 0;
   @override
+  void initState() {
+    super.initState();
+    print("initState() calisti");
+  }
+  @override
   Widget build(BuildContext context) {
     print("Build calisti");
     return Scaffold(
@@ -32,7 +37,10 @@ class _AnasayfaState extends State<Anasayfa> {
             }, child: const Text("Tıkla")),
             ElevatedButton(onPressed: (){
               var kisi = Kisiler(ad: "Bahadir", yas: 23, boy: 1.80, bekar: true);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => OyunEkrani(kisi: kisi)));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => OyunEkrani(kisi: kisi)))
+                  .then((value) {
+                    print("Anasayfaya Dönüldü..");
+              });
             }, child: const Text("Basla")),
           ],
         ),
