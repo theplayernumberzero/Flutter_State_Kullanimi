@@ -1,4 +1,5 @@
 import 'package:calisma_yapisi/anasayfa.dart';
+import 'package:calisma_yapisi/bottom_nav_kullanimi/bottom_navigation_sayfa.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Anasayfa(),
+      home: const BottomNavigationSayfa(),
     );
   }
 }
